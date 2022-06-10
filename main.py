@@ -11,9 +11,9 @@ def select_and_insert_to_table():
 
     # transform a query data to dataframe using read_sql_query
     df = pd.read_sql('SELECT KUNNR FROM KNVV_B1P',con_string)
-=======
+
     # connect to staking server and transform the data to dataframe using read_sql_query
-    con_string = pyodbc.connect("driver=ODBC Driver 17 for SQL Server;server=SBNDCDSSTGD.thaibev.com;database=SAP_DATA_Staging;uid=pysapdsusr;pwd=;")
+    con_string = pyodbc.connect("driver=ODBC Driver 17 for SQL Server;server=SBNDCDSSTGD.thaibev.com;database=SAP_DATA_Staging;uid=pysapdsusr;pwd=Pys@pdK2xT3Eu$S5;")
     df = pd.read_sql_query('SELECT KUNNR FROM KNVV_B1P',con_string)
     df.rename(columns={
         'KUNNR':'CUSTOMER_MASTER'
